@@ -1,41 +1,46 @@
- Bacteria [] colony;
+ Firefly [] colony;
  //declare bacteria variables here   
  void setup()   
  {     
- 	size(800,800);
- 	colony = new Bacteria[15];
+ 	size(900,900);
+
+ 	colony = new Firefly[20];
  	for (int i = 0; i < colony.length; i++)
  	{
- 		colony[i] = new Bacteria();
+ 		colony[i] = new Firefly();
  	}
  }   
  void draw()   
  {    
- 	background(0);
- 	for(int i = 0; i < colony.length; i++)
+ 	background(23,16,68);
+ 	fill(243,234,143);
+ 	ellipse(760,160,150,150);
+ 	fill(0, 71, 0);
+ 	rect(0,750,900,150);
+ 	for (int i = 0; i < colony.length; i++)
  	{
  		colony[i].move();
  		colony[i].show();
  	}
  	//move and show the bacteria 
  }  
- class Bacteria    
+ class Firefly    
  {     
- 	int bactX, bactY;
- 	Bacteria()
+ 	int flyX, flyY;
+ 	Firefly()
 	{	
- 	bactX = (int)(Math.random() * 601);
- 	bactY = (int)(Math.random() * 601);
+ 	flyX = (int)(Math.random() * 801);
+ 	flyY = (int)(Math.random() * 801);
  	}
    	void move()
     {
- 	bactX = bactX + (int)(Math.random() * 10 - 5);
- 	bactY = bactY + (int)(Math.random() * 10 - 5);
+ 	flyX = flyX + (int)(Math.random() * 10 - 5);
+ 	flyY = flyY + (int)(Math.random() * 10 - 5);
     }
 	void show()
     {
-    	fill(179,70,70,(int)(Math.random()*255));
-    	ellipse(bactX,bactY,25,25);
+    	noStroke();
+    	fill(255, 255, 102,(int)(Math.random()*255));
+    	ellipse(flyX,flyY,10,10);
     }
 }
-//fireflies
