@@ -12,11 +12,19 @@
  }   
  void draw()   
  {    
- 	background(23,16,68);
+ 	background(23,16,68); //night sky
  	fill(243,234,143);
- 	ellipse(760,160,150,150);
+ 	ellipse(760,160,150,150); //moon
  	fill(0, 71, 0);
- 	rect(0,750,900,150);
+ 	rect(0,750,900,150); //ground
+ 	fill(77);
+ 	beginShape(); //mountains
+ 	vertex(0,750);
+ 	vertex(300,500);
+ 	vertex(600,625);
+ 	vertex(760,600);
+ 	vertex(900,750);
+ 	endShape();
  	for (int i = 0; i < colony.length; i++)
  	{
  		colony[i].move();
@@ -29,8 +37,8 @@
  	int flyX, flyY;
  	Firefly()
 	{	
- 	flyX = (int)(Math.random() * 801);
- 	flyY = (int)(Math.random() * 801);
+ 	flyX = (int)(Math.random() * 901);
+ 	flyY = (int)(Math.random() * 901);
  	}
    	void move()
     {
