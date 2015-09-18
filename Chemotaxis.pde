@@ -1,10 +1,10 @@
- Firefly [] colony;
+Firefly [] colony;
  //declare bacteria variables here   
  void setup()   
  {     
  	size(900,900);
 
- 	colony = new Firefly[20];
+ 	colony = new Firefly[50];
  	for (int i = 0; i < colony.length; i++)
  	{
  		colony[i] = new Firefly();
