@@ -18,7 +18,7 @@
  	fill(243,234,143);
  	ellipse(760,160,150,150); 
  	//ground
- 	fill(0, 71, 0);
+ 	fill(0, 51, 0);
  	rect(0,750,900,150); 
  	//mountains
  	fill(77);
@@ -47,12 +47,20 @@
  	line(408,380,450,370);
  	line(450,370,406,280);
  	frameRate(30);
+ 	//tree
+ 	fill(51,102,0);
+ 	noStroke();
+ 	triangle(600,600,560,660,640,660);
+ 	triangle(600,640,560,700,640,700);
+ 	triangle(600,680,560,740,640,740);
+ 	fill(61, 41, 0);
+ 	rect(590,740,20,60);
+ 	//move and show the bacteria
  	for (int i = 0; i < colony.length; i++)
  	{
  		colony[i].move();
  		colony[i].show();
- 	}
- 	//move and show the bacteria 
+ 	} 
  }  
  class Firefly    
  {     
