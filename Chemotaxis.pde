@@ -50,11 +50,11 @@
  	//tree
  	fill(51,102,0);
  	noStroke();
- 	triangle(600,600,560,660,640,660);
- 	triangle(600,640,560,700,640,700);
- 	triangle(600,680,560,740,640,740);
+ 	triangle(300,600,260,660,340,660);
+ 	triangle(300,640,260,700,340,700);
+ 	triangle(300,680,260,740,340,740);
  	fill(61, 41, 0);
- 	rect(590,740,20,60);
+ 	rect(290,740,20,60);
  	//move and show the bacteria
  	for (int i = 0; i < colony.length; i++)
  	{
